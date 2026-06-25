@@ -1,0 +1,33 @@
+name: Sync website
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  sync-website:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger website update
+        uses: actions/github-script@v7
+        env:
+          WEBSITE_REPO_TOKEN: ${{ secrets.WEBSITE_REPO_TOKEN }}
+        with:
+          github-token: ${{ env.WEBSITE_REPO_TOKEN }}
+          script: |
+            if (!process.env.WEBSITE_REPO_TOKEN) {
+              core.setFailed(
+                "Missing WEBSITE_REPO_TOKEN secret. Create a fine-grained PAT with read/write access to Sam-Armstrong/sam-armstrong.github.io (Contents and Actions), then add it as a repository secret."
+              );
+              return;
+            }
+
+            await github.rest.repos.createDispatchEvent({
+              owner: "Sam-Armstrong",
+              repo: "sam-armstrong.github.io",
+              event_type: "cv-updated",
+              client_payload: {
+                cv_ref: context.sha,
+                triggered_by: context.repository.full_name,
+              },
+            });
