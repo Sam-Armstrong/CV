@@ -1,0 +1,129 @@
+\documentclass{CV}
+
+\begin{document}
+
+% header row
+\cvheader{Sam Armstrong}{%
+  \cvcontacts{%
+    \cvcontactrow{GitHub:}{\href{https://github.com/Sam-Armstrong}{github.com/Sam-Armstrong}}
+    \cvcontactrow{LinkedIn:}{\href{https://www.linkedin.com/in/sam-a-a5557112a/}{linkedin.com/in/sam-a-a5557112a}}
+    \cvcontactrow{Website:}{\href{https://sam-armstrong.github.io/}{sam-armstrong.github.io}}
+    \cvcontactrow{Email:}{\href{mailto:samuel.armstrong2014@gmail.com}{samuel.armstrong2014@gmail.com}}%
+  }%
+}
+
+\cvheadersep
+
+% left column (34%)
+\noindent
+\begin{minipage}[t]{0.34\textwidth}
+
+\section{Personal Profile}
+\sectionrule\\
+I am currently completing my Master's degree in Computer Science, after 3+ years of industry experience
+building software that is maintainable, scalable, and genuinely useful for customers. I am driven by
+developing, shipping and iterating rapidly, and am seeking a company culture that shares this same philosophy.
+
+\sectionsep
+
+\section{Education}
+\sectionrule
+
+\datecolor{2025--2026}\par
+\runsubsection{University of Warwick}\par
+MSc\par
+Computer Science
+
+\vspace{6pt}
+
+\datecolor{2018--2021}\par
+\runsubsection{University of Sheffield}
+
+BSc\par
+Artificial Intelligence \& Computer Science\par
+First Class Honours\par
+
+\sectionsep
+
+\section{Experience \& Projects}
+\sectionrule
+
+\runsubsection{Hackathons}
+\begin{tightemize}
+  \item {\cvsemibold Whack} (2025) --- Created an AI learning tool that lectures over pdf slides, asks questions, and learns the user's level of understanding for the incident.io problem statement.
+  \item {\cvsemibold Anthropic London} (2023) --- Created a GitHub bot to automatically add docstrings to functions using the Claude API.
+\end{tightemize}
+
+\vspace{4pt}
+
+\runsubsection{Presented My Academic Research}
+\begin{tightemize}
+  \item Workshop on Multi-Agent Based Simulation (MABS) 2022
+  \item Sheffield SIAM-IMA Applied Mathematics and Statistics Conference 2021
+\end{tightemize}
+
+\end{minipage}%
+\hfill
+% right column (61%)
+\begin{minipage}[t]{0.61\textwidth}
+
+\section{Entrepreneurship}
+\sectionrule
+
+\datecolor{2025--Present}\par
+\runsubsection{Founder --- CozyCasts}\par
+Created CozyCasts --- a platform for streaming AI-generated podcasts to help you learn, or for entertainment. The backend is designed for scalability, while maintaining low latency and cost-conscience, and uses an API/worker pattern to decouple the compute-heavy TTS from the API.
+\begin{tightemize}
+  \item API service is deployed serverless on Google Cloud Run
+  \item Worker is deployed on GKE with KEDA for scale-to-zero
+  \item API service schedules worker jobs using Google Cloud Pub/Sub
+  \item Redis Pub/Sub is used for streaming audio back to the API as it's generated in real-time, then on to the user via a WebSocket
+  \item We use cache-aside to prevent a race condition on the WebSocket
+  \item Metadata is stored in PostgreSQL (Cloud SQL) and audio/images in GCS
+  \item Frontend webapp is built using React/Next.js
+\end{tightemize}
+
+\vspace{4pt}
+CozyCasts is currently in alpha, available at \href{https://cozycasts.com}{cozycasts.com}
+
+\vspace{8pt}
+
+\datecolor{2024--2025}\par
+\runsubsection{Co-Founder \& CTO --- Ivy}\par
+Co-founded Ivy --- which allows any ML models or code to be converted between frameworks such as PyTorch and JAX --- as a spin-off from our previous company, Unify. Primarily working with:
+\begin{tightemize}
+  \item DevOps with cloud infrastructure (GCP) and CI/CD
+  \item Advanced Python programming; AST; ML frameworks
+\end{tightemize}
+
+\vspace{4pt}
+I continue to maintain Ivy now as an open-source project, which is:
+\begin{tightemize}
+  \item Available via PyPI (`pip install ivy') and has \textasciitilde 14,000 GH stars
+  \item Integrated into Kornia, the popular computer vision library
+\end{tightemize}
+
+\sectionsep
+
+\section{Employment}
+\sectionrule
+
+\datecolor{2023--2024}\par
+\runsubsection{Machine Learning Engineer --- Unify AI (YC W23)}
+\begin{tightemize}
+  \item Led a team of five developing a computational graph tracer which can extract a minimal functional graph from arbitrary Python code --- enabling any Ivy model to be compiled into an efficient representation.
+  \item Developed the multi-backend framework Ivy: creating backend functions, forming the CI, and reviewing PRs from contributors.
+\end{tightemize}
+
+\vspace{8pt}
+
+\datecolor{2022--2023}\par
+\runsubsection{ML Software Engineer --- Intradiem}
+\begin{tightemize}
+  \item Orchestrated the creation of Java data pipelines for transforming raw data from an AWS S3 datalake into bucketed time-series data. These were used for both ML applications in both training and inference, and required performant algorithm design for scalability.
+  \item Led development of a Python micro-service using Flask/MariaDB, containerised with Docker, to document customer/product relationships and make this information easily accessible to services across the business.
+\end{tightemize}
+
+\end{minipage}
+
+\end{document}
