@@ -16,7 +16,7 @@
 
 % left column (34%)
 \noindent
-\begin{minipage}[t]{0.34\textwidth}
+\begin{cvcolumn}{0.34\textwidth}
 
 \section{Personal Profile}
 \sectionrule\\
@@ -31,17 +31,22 @@ developing, shipping and iterating rapidly, and am seeking a company culture tha
 
 \datecolor{2025--2026}\par
 \runsubsection{University of Warwick}\par
-MSc\par
-Computer Science
+\cvdetail{{\cvmedium\fontsize{10pt}{12pt}\selectfont MSc}\hspace{4pt}Computer Science}
 
 \vspace{6pt}
 
 \datecolor{2018--2021}\par
 \runsubsection{University of Sheffield}
-
-BSc\par
-Artificial Intelligence \& Computer Science\par
-First Class Honours\par
+\cvdetail{
+  \begin{tabular}[t]{@{}l@{\hspace{4pt}}l@{}}
+    {\cvmedium\fontsize{10pt}{12pt}\selectfont BSc} &
+    \begin{tabular}[t]{@{}l@{}}
+      Artificial Intelligence \\
+      \& Computer Science \\
+    \end{tabular} \\
+  \end{tabular}
+}
+\cvdetail{Grade: \textit{First Class Honours}}
 
 \sectionsep
 
@@ -62,10 +67,10 @@ First Class Honours\par
   \item Sheffield SIAM-IMA Applied Mathematics and Statistics Conference 2021
 \end{tightemize}
 
-\end{minipage}%
+\end{cvcolumn}%
 \hfill
 % right column (61%)
-\begin{minipage}[t]{0.61\textwidth}
+\begin{cvcolumn}{0.61\textwidth}
 
 \section{Entrepreneurship}
 \sectionrule
@@ -124,6 +129,6 @@ I continue to maintain Ivy now as an open-source project, which is:
   \item Led development of a Python micro-service using Flask/MariaDB, containerised with Docker, to document customer/product relationships and make this information easily accessible to services across the business.
 \end{tightemize}
 
-\end{minipage}
+\end{cvcolumn}
 
 \end{document}

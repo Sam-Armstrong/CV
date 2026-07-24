@@ -68,6 +68,18 @@
 \pagestyle{empty}
 \setlist[itemize]{leftmargin=*, nosep}
 
+% minipages zero \parskip; keep columns explicit if we restore it later
+\newenvironment{cvcolumn}[1]{%
+  \begin{minipage}[t]{#1}%
+}{%
+  \end{minipage}%
+}
+
+% stacked short lines (degree title, etc.) — explicit space, not \parskip
+\newcommand{\cvdetail}[1]{%
+  \noindent #1\par\vspace{4pt}%
+}
+
 % header
 \newcommand{\cvname}[1]{{%
   \cvdisplay\fontsize{24pt}{28pt}\selectfont #1%
