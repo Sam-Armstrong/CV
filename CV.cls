@@ -139,7 +139,10 @@
   \par\vspace{6pt}%
 }
 
-\newcommand{\runsubsection}[1]{{\cvmedium\color{ink}\fontsize{11pt}{13pt}\selectfont #1}}
+\newcommand{\runsubsection}[1]{%
+  {\cvmedium\color{ink}\fontsize{11pt}{13pt}\selectfont #1}%
+  \par\vspace{4pt}%
+}
 
 \newenvironment{tightemize}{%
   \begin{itemize}[
