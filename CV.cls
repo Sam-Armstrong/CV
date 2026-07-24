@@ -122,18 +122,22 @@
   {}
   {0pt}
   {\MakeUppercase}
-\titlespacing*{\section}{0pt}{8pt}{3pt}
+% before-skip is unreliable inside minipages; use \sectionsep between sections
+\titlespacing*{\section}{0pt}{0pt}{1pt}
 
 \newcommand{\sectionrule}{%
-  \vspace{-1pt}%
+  \vspace{-3pt}%
   \noindent\rule{\linewidth}{0.4pt}%
   \vspace{3pt}%
 }
 
-\newcommand{\sectionsep}{\vspace{4pt}}
+\newcommand{\sectionsep}{\par\vspace{10pt}}
 
 % entries
-\newcommand{\datecolor}[1]{{\color{muted}\cvmedium\itshape\fontsize{10pt}{12pt}\selectfont #1}}
+\newcommand{\datecolor}[1]{%
+  {\color{muted}\cvmedium\itshape\fontsize{10pt}{12pt}\selectfont #1}%
+  \par\vspace{6pt}%
+}
 
 \newcommand{\runsubsection}[1]{{\cvmedium\color{ink}\fontsize{11pt}{13pt}\selectfont #1}}
 
