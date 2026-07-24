@@ -26,12 +26,13 @@
 }
 
 % fonts (Instrument Sans + DM Serif Display)
+% static weight files: XeLaTeX does not reliably apply variable-font axes
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{InstrumentSans-Regular.ttf}[
   Path=fonts/instrument-sans/,
-  BoldFont=InstrumentSans-Regular.ttf,
-  BoldFeatures={RawFeature={axis=wght=600}},
+  BoldFont=InstrumentSans-Bold.ttf,
   ItalicFont=InstrumentSans-Italic.ttf,
+  BoldItalicFont=InstrumentSans-BoldItalic.ttf,
   Color=ink,
 ]
 
@@ -41,15 +42,23 @@
   Color=ink,
 ]
 
-\newfontfamily\cvmedium{InstrumentSans-Regular.ttf}[
+\newfontfamily\cvmedium{InstrumentSans-Medium.ttf}[
   Path=fonts/instrument-sans/,
-  RawFeature={axis=wght=500},
+  ItalicFont=InstrumentSans-MediumItalic.ttf,
   Color=ink,
 ]
 
-\newfontfamily\cvsemibold{InstrumentSans-Regular.ttf}[
+\newfontfamily\cvsemibold{InstrumentSans-SemiBold.ttf}[
   Path=fonts/instrument-sans/,
-  RawFeature={axis=wght=600},
+  Color=ink,
+]
+
+% section title weight: swap the file below
+%   InstrumentSans-SemiBold.ttf  (lighter)
+%   InstrumentSans-Bold.ttf      (heavier)
+\newfontfamily\cvbold{InstrumentSans-SemiBold.ttf}[
+  Path=fonts/instrument-sans/,
+  LetterSpace=1.5,
   Color=ink,
 ]
 
@@ -109,13 +118,10 @@
 
 % sections
 \titleformat{\section}
-  {%
-    \addfontfeatures{LetterSpace=1.5}%
-    \cvsemibold\color{accent}\fontsize{9pt}{11pt}\selectfont\MakeUppercase%
-  }
+  {\cvbold\color{accent}\fontsize{9pt}{11pt}\selectfont}
   {}
   {0pt}
-  {}
+  {\MakeUppercase}
 \titlespacing*{\section}{0pt}{8pt}{3pt}
 
 \newcommand{\sectionrule}{%
@@ -127,9 +133,9 @@
 \newcommand{\sectionsep}{\vspace{4pt}}
 
 % entries
-\newcommand{\datecolor}[1]{{\color{muted}\cvmedium\fontsize{10pt}{12pt}\selectfont #1}}
+\newcommand{\datecolor}[1]{{\color{muted}\cvmedium\itshape\fontsize{10pt}{12pt}\selectfont #1}}
 
-\newcommand{\runsubsection}[1]{{\cvsemibold\color{ink}\fontsize{11pt}{13pt}\selectfont #1}}
+\newcommand{\runsubsection}[1]{{\cvmedium\color{ink}\fontsize{11pt}{13pt}\selectfont #1}}
 
 \newenvironment{tightemize}{%
   \begin{itemize}[
