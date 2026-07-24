@@ -135,6 +135,7 @@
 
 % entries
 \newcommand{\datecolor}[1]{%
+  \par\vspace{2pt}%
   {\color{muted}\cvmedium\itshape\fontsize{10pt}{12pt}\selectfont #1}%
   \par\vspace{6pt}%
 }
