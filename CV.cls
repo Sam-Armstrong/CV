@@ -108,7 +108,7 @@
   \color{muted}\cvmedium\fontsize{10pt}{12pt}\selectfont #1%
 }}
 
-\newcommand{\contactlink}[1]{{\cvsemibold\fontsize{10pt}{12pt}\selectfont\color{ink}#1}}
+\newcommand{\contactlink}[1]{{\cvmedium\fontsize{10pt}{12pt}\selectfont\color{ink}#1}}
 
 \newcommand{\cvcontactrow}[2]{\cvcontactlabel{#1} & \contactlink{#2} \\}
 
