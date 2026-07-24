@@ -171,4 +171,18 @@
   \vspace{1pt}%
 }
 
+\newenvironment{tightemize*}{%
+  \begin{itemize}[
+    leftmargin=0pt,
+    topsep=2pt,
+    itemsep=3pt,
+    parsep=0pt,
+    partopsep=0pt,
+    label={},
+  ]%
+}{%
+  \end{itemize}%
+  \vspace{1pt}%
+}
+
 \newcommand{\cvrefs}[1]{\vspace{6pt}{\small #1}}
