@@ -179,7 +179,7 @@
     itemsep=3pt,
     parsep=0pt,
     partopsep=0pt,
-    label={},
+    label=\textbullet,
   ]%
 }{%
   \end{itemize}%
