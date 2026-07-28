@@ -160,7 +160,7 @@
 
 \newenvironment{tightemize}{%
   \begin{itemize}[
-    leftmargin=14pt,
+    leftmargin=8pt,
     topsep=2pt,
     itemsep=1pt,
     parsep=0pt,
@@ -169,7 +169,6 @@
   ]%
 }{%
   \end{itemize}%
-  \vspace{1pt}%
 }
 
 \newenvironment{tightemize*}{%
