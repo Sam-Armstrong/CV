@@ -96,24 +96,31 @@ with the thesis currently in progress.}
 Created a platform for streaming AI-generated podcasts to help you learn, or for entertainment. The backend is
 designed for scalability, while maintaining low latency and cost-conscience, and uses an API/worker pattern to
 decouple the compute-heavy TTS from the API.
-\begin{tightemize}
-  \item API service is deployed serverless on Google Cloud Run
-  \item Worker is deployed on GKE with KEDA for scale-to-zero
-  \item API service schedules worker jobs using Google Cloud Pub/Sub
-  \item Redis Pub/Sub is used for streaming audio back to the API as it's generated in real-time, then on to the user via a WebSocket
-  \item We use cache-aside to prevent a race condition on the WebSocket
-  \item Metadata is stored in PostgreSQL (Cloud SQL) and audio/images in GCS
-  \item Frontend webapp is built using React/Next.js
-\end{tightemize}
 
 \vspace{8pt}
 
 \runsubsection{PDF Word Count}\par
 
 Created an extension for Visual Studio Code and Open VSX compatible editors (such as Cursor), which displays the
-word count of PDF documents in the status bar, along with more detailed statistics about a PDF (file size, page
-count, character count, etc.) in the status bar tooltip. The extension is published and available on the VS Code
-Marketplace and Open VSX Registry (see links below).
+word count of PDF documents in the status bar, with more detailed statistics in the status bar tooltip.
+
+\vspace{4pt}
+\noindent
+\href{https://open-vsx.org/extension/Sam-Armstrong/pdf-word-count}{%
+  \raisebox{-0.1\height}{\includegraphics[height=9pt]{images/openvsx.png}}%
+  \hspace{3pt}Open VSX%
+}%
+\hspace{10pt}%
+\href{https://marketplace.visualstudio.com/items?itemName=Sam-Armstrong.pdf-word-count}{%
+  \raisebox{-0.05\height}{\includegraphics[height=9pt]{images/vscode.png}}%
+  \hspace{3pt}VS Code%
+}%
+\hspace{10pt}%
+\href{https://github.com/Sam-Armstrong/pdf-word-count}{%
+  \raisebox{-0.05\height}{\includegraphics[height=9pt]{images/github.png}}%
+  \hspace{3pt}GitHub%
+}%
+\par
 
 \vspace{8pt}
 

@@ -11,6 +11,7 @@
 \usepackage{fontspec}
 \usepackage{titlesec}
 \usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 
 % palette (matches sam-armstrong.github.io)
