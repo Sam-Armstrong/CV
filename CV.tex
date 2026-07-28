@@ -97,7 +97,7 @@ Created a platform for streaming AI-generated podcasts to help you learn, or for
 designed for scalability, while maintaining low latency and cost-conscience, and uses an API/worker pattern to
 decouple the compute-heavy TTS from the API.
 
-\vspace{8pt}
+\sectionsep
 
 \runsubsection{\href{https://github.com/Sam-Armstrong/pdf-word-count}{PDF Word Count}}\par
 
@@ -108,12 +108,12 @@ word count of PDF documents in the status bar, with more detailed statistics in 
 \noindent
 \href{https://open-vsx.org/extension/Sam-Armstrong/pdf-word-count}{%
   \raisebox{-0.1\height}{\includegraphics[height=9pt]{images/openvsx.png}}%
-  \hspace{3pt}Open VSX%
+  \hspace{3pt}Open VSX Registry%
 }%
 \hspace{10pt}%
 \href{https://marketplace.visualstudio.com/items?itemName=Sam-Armstrong.pdf-word-count}{%
   \raisebox{-0.05\height}{\includegraphics[height=9pt]{images/vscode.png}}%
-  \hspace{3pt}VS Code%
+  \hspace{3pt}VS Code Marketplace%
 }%
 \hspace{10pt}%
 \href{https://github.com/Sam-Armstrong/pdf-word-count}{%
@@ -122,7 +122,7 @@ word count of PDF documents in the status bar, with more detailed statistics in 
 }%
 \par
 
-\vspace{8pt}
+\sectionsep
 
 \runsubsection{\href{https://github.com/Sam-Armstrong/UFC-Almanac}{UFC Almanac}}\par
 
@@ -130,25 +130,23 @@ A collection of UFC datasets scraped from the web and regularly updated via CI/C
 data transformation pipelines to convert the raw data into structured data for ML training, and deep learning
 models/training pipelines for predicting fight outcomes.
 
-\vspace{8pt}
+\sectionsep
 
 \section{Entrepreneurship}
 \sectionrule
 
 \datecolor{2024--2025}\par
-\runsubsection{Co-Founder --- Ivy}\par
-Co-founded Ivy --- which allows any ML models or code to be converted between frameworks such as PyTorch and JAX --- as a spin-off from our previous company, Unify. Primarily working with:
-\begin{tightemize}
-  \item DevOps with cloud infrastructure (GCP) and CI/CD
-  \item Advanced Python programming; AST; ML frameworks
-\end{tightemize}
+\runsubsection{Co-Founder --- \href{https://github.com/unifyai/ivy}{Ivy}}\par
+Created Ivy with two former colleagues, as a spin-off from our previous company (Unify), with the blessing of their CEO.
+Ivy allows any ML models or code to be converted ('transpiled') between frameworks such as PyTorch and JAX. The primary
+work involved advanced Python programming, including AST manipulation and ML framework integration, for the design of the
+transpiler. To create the customer-facing interface, I also did significant work with DevOps using cloud infrastructure
+(GCP), backend development with FastAPI, and frontend development with React.
 
-\vspace{4pt}
-I continue to maintain Ivy now as an open-source project, which is:
-\begin{tightemize}
-  \item Available via PyPI (`pip install ivy') and has \textasciitilde 14,000 GH stars
-  \item Integrated into Kornia, the popular computer vision library
-\end{tightemize}
+\vspace{2pt}
+After interviewing with Y Combinator and talking to potential customers, we failed to prove commercial viability, so we
+ended Ivy as a venture and open-sourced the project, which is available on \href{https://github.com/unifyai/ivy}{\textit{GitHub}}
+and \href{https://pypi.org/project/ivy/}{\textit{PyPI}}.
 
 \sectionsep
 
@@ -156,7 +154,7 @@ I continue to maintain Ivy now as an open-source project, which is:
 \sectionrule
 
 \datecolor{2023--2024}\par
-\runsubsection{Machine Learning Engineer --- Unify AI (YC W23)}
+\runsubsection{Machine Learning Software Engineer --- Unify AI (YC W23)}
 \begin{tightemize}
   \item Led a team of five developing a computational graph tracer which can extract a minimal functional graph from arbitrary Python code --- enabling any Ivy model to be compiled into an efficient representation.
   \item Developed the multi-backend framework Ivy: creating backend functions, forming the CI, and reviewing PRs from contributors.
@@ -165,7 +163,7 @@ I continue to maintain Ivy now as an open-source project, which is:
 \vspace{8pt}
 
 \datecolor{2022--2023}\par
-\runsubsection{ML Software Engineer --- Intradiem}
+\runsubsection{Machine Learning Engineer --- Intradiem}
 \begin{tightemize}
   \item Orchestrated the creation of Java data pipelines for transforming raw data from an AWS S3 datalake into bucketed time-series data. These were used for both ML applications in both training and inference, and required performant algorithm design for scalability.
   \item Led development of a Python micro-service using Flask/MariaDB, containerised with Docker, to document customer/product relationships and make this information easily accessible to services across the business.
