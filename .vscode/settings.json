@@ -67,5 +67,13 @@
     ],
     "cSpell.enabledFileTypes": {
         "latex-class": false
-    }
+    },
+    "cSpell.words": [
+        "containerised",
+        "datalake",
+        "docstrings",
+        "Hackathon",
+        "Kornia",
+        "MABS"
+    ]
 }
