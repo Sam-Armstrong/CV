@@ -150,12 +150,13 @@
 \newcommand{\datecolor}[1]{%
   \par\vspace{2pt}%
   {\color{muted}\cvmedium\itshape\fontsize{10pt}{12pt}\selectfont #1}%
-  \par\vspace{6pt}%
+  \par\vspace{5pt}%
 }
 
 \newcommand{\runsubsection}[1]{%
+  \vspace{1pt}%
   {\cvmedium\color{ink}\fontsize{11pt}{13pt}\selectfont #1}%
-  \par\vspace{2pt}%
+  \par\vspace{4pt}%
 }
 
 \newenvironment{tightemize}{%
