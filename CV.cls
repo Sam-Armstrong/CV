@@ -139,7 +139,7 @@
 \titlespacing*{\section}{0pt}{0pt}{1pt}
 
 \newcommand{\sectionrule}{%
-  \vspace{-3pt}%
+  \vspace{-5pt}%
   \noindent\rule{\linewidth}{0.4pt}%
   \vspace{3pt}%
 }
